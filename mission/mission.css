@@ -1,0 +1,52 @@
+*{
+    text-align: center;
+}
+h1{
+    font-weight: 100;
+    font-size: 40px;
+}
+h2{
+    font-weight: 100;
+    font-size: 20px;
+    color: #0082fb;
+    border-bottom: 1px solid black;
+    max-width: 550px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+body{
+    padding: 5em;
+}
+div *{
+    padding: 10px 5em;
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: left;
+    box-sizing: border-box;
+}
+.main, .main *{
+    text-align: left;
+    font-weight: bold;
+}
+.italic{
+    font-style: italic;
+    font-weight: bold;
+}
+ol {
+    container-type: inline-size;
+    padding: 0;
+    padding-left: 8em;
+    text-align: center;
+    font-weight: bold;
+}
+ol li {
+    text-align: left;
+    margin-left: 0;
+    padding: 10px 0;
+    padding-right: 8em;
+}
+img{
+    padding-top: 30px;
+    width: 20%;
+    height: auto;
+}
