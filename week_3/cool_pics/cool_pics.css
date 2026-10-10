@@ -2,22 +2,26 @@
     box-sizing: border-box;
 }
 
-/* Disappear menues */
 ul.desktop-menu, button.menu-button, ul.mobile-menu{
     display: none;
 }
 
 body{
-    background-color: gray  ;
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 header{
     display: block;
-    background-color: cornflowerblue;
+    background-color: #02A4D3;
+    padding: 10px 0;
 }
 
 header h1{
     text-align: center;
+    color: white;
+    margin: 10px 0;
 }
 
 ul.desktop-menu {
@@ -28,33 +32,60 @@ ul.desktop-menu {
     margin: 0;
 }
 
+ul.desktop-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .nav-bar {
     text-align: center;
 }
 
+/* --- Styled Mobile Dropdown Menu --- */
 .mobile-menu {
     display: none;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background-color: #028bb3;
 }
 
 .mobile-menu.open { 
     display: block;
 }
 
-ul.mobile-menu {
-    padding-left: 0;
-    list-style-position: inside;
+.mobile-menu li {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-button{
-    justify-self: center;
+.mobile-menu a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-menu a:hover {
+    text-decoration: underline;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px auto;
 }
 
 .gallery {
     width: 100%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 0 20px;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -68,9 +99,39 @@ button{
 .gallery img {
     width: 100%;
     height: auto;
-    border: 10px solid white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+dialog.viewer {
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+dialog.viewer::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+dialog.viewer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff4d4d;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 700px) {
@@ -88,9 +149,6 @@ button{
 @media screen and (max-width: 600px) {
     button.menu-button {
         display: block;
-    }
-    ul.mobile-menu{
-        display: none;
     }
 }
 
