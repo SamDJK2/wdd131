@@ -40,7 +40,7 @@ const articles = [
 	}
 ];
 
-const blogContainer = document.querySelector("#blog-list")
+const blogContainer = document.querySelector("#blog-list");
 
 articles.forEach(article => {
 
@@ -58,4 +58,4 @@ articles.forEach(article => {
     `
 
     blogContainer.appendChild(blogCard);
-})
+});
