@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="eventform.css">
+<script src="eventform.js" defer></script>
+<body>
+    <main class="wrapper">
+        <h1>Event Ticket</h1>
+        <form id="event-ticket">
+            <div class="field">
+                <label for="first-name">First Name</label>
+                <input type="text" name="firstName" id="first-name" required>
+            </div>
+
+            <div class="field">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="lastName" id="last-name" required>
+            </div>
+
+            <div class="field full">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="field">
+                <label for="ticket-type">Type</label>
+                <select name="type" id="ticketType" aria-controls="idContainer" required>
+                    <option value="">Choose One</option>
+                    <option value="Student">Student</option>
+                    <option value="Guest">Guest</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="event-date">Event Date</label>
+                <input type="date" name="eventDate" id="eventDate" required>
+            </div>
+
+            <div class="field full" id="idContainer" hidden>
+                <label for="studentID">Student I#</label>
+                <input type="number" name="studentID" id="studentID">
+            </div>
+
+            <div class="field full" id="codeContainer" hidden>
+                <label for="accessCode">Access Code</label>
+                <input type="text" name="accessCode" id="accessCode">
+            </div>
+
+            <button class="full" type="submit">Create Ticket</button>
+        </form>
+
+        <section id="output" aria-live="polite"></section>
+    </main>
+</body>
+</html>
