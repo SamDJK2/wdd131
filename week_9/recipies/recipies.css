@@ -1,6 +1,4 @@
-/* =========================================
-   Mobile-First Base Styles
-   ========================================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -27,7 +25,6 @@ img {
     display: block;
 }
 
-/* Header & Logo */
 header {
     border-bottom: 1px solid #ccc;
     padding-bottom: 1.25rem;
@@ -171,9 +168,6 @@ footer {
     color: #0645ad;
 }
 
-/* =========================================
-   Larger Device Styles (600px and up)
-   ========================================= */
 @media (min-width: 600px) {
     .logo-title img {
         width: 80px;
@@ -183,7 +177,6 @@ footer {
         font-size: 4rem;
     }
 
-    /* Side-by-side Recipe Card */
     .recipe-card {
         flex-direction: row;
         align-items: flex-start;
@@ -200,12 +193,10 @@ footer {
         flex: 1;
     }
 
-    /* Show description on larger screens */
     .recipe-description {
         display: block;
     }
 
-    /* Footer Side-by-Side (Attribution Left, Social Icons Right) */
     footer {
         flex-direction: row-reverse;
         justify-content: space-between;
